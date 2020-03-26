@@ -46,8 +46,7 @@ public class View4Fragment extends Fragment implements AbsListView.OnScrollListe
 
 
     Activity activity;
-    String Keyword = ((MainActivity)getActivity()).getURLEncode("포켓볼");
-    String target = "https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&order=date&videoSyndicated=true&maxResults=10&safeSearch=strict&type=video";
+    String target = "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Service4";
 
     private OnFragmentInteractionListener mListener;
 
@@ -109,7 +108,6 @@ public class View4Fragment extends Fragment implements AbsListView.OnScrollListe
         driverMovieListView.setOnScrollListener(this);
 
         // 다음 데이터를 불러온다.
-        target = target + "&key="+getResources().getString(R.string.gcp_api_key)+ "&q="+Keyword;
         getItem(target);
     }
 
@@ -155,7 +153,7 @@ public class View4Fragment extends Fragment implements AbsListView.OnScrollListe
             String aa= SharedPreference.getSharedPreference(getActivity(), "nextPageToken");
 
 
-            target = target + "&key="+getResources().getString(R.string.gcp_api_key)+ "&q="+Keyword +"&pageToken="+ aa;
+            target = target +"&pageToken="+ aa;
             // 다음 데이터를 불러온다.
             getItem(target);
         }

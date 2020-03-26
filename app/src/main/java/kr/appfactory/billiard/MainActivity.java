@@ -376,7 +376,7 @@ public class MainActivity extends AppCompatActivity  {
                 channel_list.add("세미흐 사이그네르");
                 channel_list.add("레이몽 클루망");
                 Iterator<Object> ie = channel_list.iterator();
-
+                int ch_id = 1;
                 while(ie.hasNext()) {
 
 
@@ -385,8 +385,9 @@ public class MainActivity extends AppCompatActivity  {
                     String Keyword = getURLEncode(""+title+" 당구");
 
 
-                    //itemList2.add(new MenuItema("명품스윙 에이미 조 골프 레슨", "https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&videoSyndicated=true&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&safeSearch=strict&type=video&q=포켓볼&pageToken="));
-                    itemList2.add(new MenuItema(""+title+" 프로", "https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&order=relevance&videoSyndicated=true&maxResults=10&safeSearch=strict&type=video&q="+getURLEncode(title)+"&pageToken="));
+                    itemList2.add(new MenuItema(""+title+" 프로", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_PChannel&ch_id="+ch_id));
+
+                    ch_id ++;
 
                 }
 
@@ -421,48 +422,20 @@ public class MainActivity extends AppCompatActivity  {
                 itemList3 = new ArrayList<MenuItema>();
 
 
-//                itemList3.add(new MenuItema("[당구강좌 4구 & 3C] 4구 기초", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL43b2md03gKdN2zJGzqFVG_3aCfR8Xltk&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-//                itemList3.add(new MenuItema("[당구강좌 4구 & 3C] 4구 모아치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL43b2md03gKeHH28o67I0gCI-TXnQ3UQZ&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-//                itemList3.add(new MenuItema("[당구강좌 4구 & 3C] 4구 실력 향상을 위한 기본 배치 연습", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL43b2md03gKcc3sf4h_JsuDi6jE0Tfcm&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-//                itemList3.add(new MenuItema("[당구강좌 4구 & 3C] 끌어치기를 이용한 4구 모아치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL43b2md03gKeLLTqOttn7KZQxaQkej-vb&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-/*
-                itemList3.add(new MenuItema("[아이빌리TV] 당구기초", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PB4HKERIKQa_4KxIYeLxeNM&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[아이빌리TV] 당구두께조절", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PCD6KLQJo02Kxw6P-9GC8-3&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[아이빌리TV] 당구 끌어치기,밀어치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PCRppnvEjQoNTpxeQprdYWK&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[아이빌리TV] 4구당구 1,2쿠션", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PCS9XoC2Y4LMMJUFgcxW_gl&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[아이빌리TV] 4구당구모아치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PDvfzfZX7-47Z6uchWXHpVL&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[아이빌리TV] 3쿠션기초", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLQIx-v8Vj3PApkjxtUevIiM_7OEXkRS0l&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-*/
-                itemList3.add(new MenuItema("[닥스김의 당구TV] 뒤돌려치기,앞돌리기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL_OXA-uPAecVMKL-m55oIzU0XD-YSRndq&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[닥스김의 당구TV] 뱅크샷, 대회전", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL_OXA-uPAecV4RbwqJvbCnd7wLVEhA6kJ&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[닥스김의 당구TV] 빗겨치기, 세워치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL_OXA-uPAecU3sQTNnT3x951dQIhpB4E5&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[닥스김의 당구TV] 옆돌리기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL_OXA-uPAecXWWlczy2R6ClLQfhxIE-9I&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[닥스김의 당구TV] 횡단샷, 더블쿠션, 더블레일", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL_OXA-uPAecXn8MpACZBBvXaFCcSv6YCo&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
+                itemList3.add(new MenuItema("[닥스김의 당구TV] 뒤돌려치기,앞돌리기", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=1"));
+                itemList3.add(new MenuItema("[닥스김의 당구TV] 뱅크샷, 대회전", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=2"));
+                itemList3.add(new MenuItema("[닥스김의 당구TV] 빗겨치기, 세워치기", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=3"));
+                itemList3.add(new MenuItema("[닥스김의 당구TV] 옆돌리기", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=4"));
+                itemList3.add(new MenuItema("[닥스김의 당구TV] 횡단샷, 더블쿠션, 더블레일", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=5"));
+                itemList3.add(new MenuItema("[정필규 세리당구] 힘조절", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_PChannel&ch_id=6"));
+                itemList3.add(new MenuItema("[정필규 세리당구] 하이런[HIGH RUN]", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=7"));
+                itemList3.add(new MenuItema("[정필규 세리당구] 세리 연습법", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=8"));
+                itemList3.add(new MenuItema("[정필규 세리당구] 제 3구역", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=9"));
+                itemList3.add(new MenuItema("[정필규 세리당구] 세리 만들기", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=10"));
+                itemList3.add(new MenuItema("[모두의 당구장] 당구시스템", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=11"));
+                itemList3.add(new MenuItema("[조이빌리아드] The 레슨", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=12"));
+                itemList3.add(new MenuItema("[당구레슨] 비법전수", "http://appfactory.kr/MovieSearch/getMovie?table=Bill_Channel&ch_id=13"));
 
-                itemList3.add(new MenuItema("[정필규 세리당구] 힘조절", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL-qbw1O53wy7omCkTX2-bEaayDQrhouQm&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[정필규 세리당구] 하이런[HIGH RUN]", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL-qbw1O53wy5mg5igxQ1yY5DVnAMBquiA&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[정필규 세리당구] 세리 연습법", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL-qbw1O53wy4NuduocevxHaiemjgPxji0&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[정필규 세리당구] 제 3구역", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL-qbw1O53wy6jJnL019uRk4Ex_8RkUIPX&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[정필규 세리당구] 세리 만들기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PL-qbw1O53wy7iNAOa1owBLuwaYGy8MBxE&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-
-                itemList3.add(new MenuItema("[모두의 당구장] 당구시스템", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLBy7bkXgpNwaB3B80RcZKiSJGK0YMJOsu&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-
-                itemList3.add(new MenuItema("[조이빌리아드] The 레슨", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLklmWgSTNt_rqskHoRtNj1O9biyrnDdid&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-
-                itemList3.add(new MenuItema("[당구레슨] 비법전수", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&videoEmbeddable=true&playlistId=PLrrtQdjTU-KxO2TKmWz39OU25Q14G3De7&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-
-
-                /*
-
-                itemList3.add(new MenuItema("[당구강좌] 응급실 [Emergency Room]", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER8tV3kXUOOsReZ4e33JTDFe&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 고수들만의 비법", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER_kzB_AvI_wsEDy7WkqycYf&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 실전 당구 풀이 | 3쿠션-1쿠션 걸어치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER-A0HH_SGw3x0dH5z2KJ8rr&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 실전 당구 풀이 | 3쿠션-2쿠션 걸어치기", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER-v0B8vnx31lFTxo_w2rQT3&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 포켓볼 초급편", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER_GnNF-Eev7ozCW6zrSUt7v&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 포켓볼 초급편", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER-v0B8vnx31lFTxo_w2rQT3&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-                itemList3.add(new MenuItema("[당구강좌] 포켓볼 중,고급편", "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLIHzcFhw_ER-v0B8vnx31lFTxo_w2rQT3&maxResults=10&key=AIzaSyBn4fOG4zKOYVbYtcMtGj8gGsVVpTYb68g&pageToken="));
-
-*/
                 //어댑터 생성
                 menuItemAdapter3 = new MenuItemAdapter(activity, itemList3);
                 //어댑터 연결
@@ -782,6 +755,18 @@ class LoadMovieTask extends AsyncTask<Void, Void, String> {
                         driverMovieList.add(drivermovie);
                     }
 
+                }else if(jsonObject.getString("kind").equals("searchListResponse")){
+
+                    videoId = object.getString("videoId");
+                    subjectText = object.getString("title");
+                    descriptionText = object.getString("description");
+                    viewDate = object.getString("publishedAt")
+                            .substring(0, 10);
+                    thum_pic = object.getString("thumbnails"); // 썸내일 이미지 URL값
+
+                    viewCnt = "0";
+                    DriverMovie drivermovie = new DriverMovie(thum_pic, subjectText, viewDate, viewCnt, videoId , descriptionText);
+                    driverMovieList.add(drivermovie);
                 }
 
 
