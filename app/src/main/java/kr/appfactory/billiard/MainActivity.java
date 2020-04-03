@@ -350,6 +350,7 @@ public class MainActivity extends AppCompatActivity  {
                     }
                 });
 
+                /*
                 // 데이터 원본 준비
                 itemList2 = new ArrayList<MenuItema>();
                 ArrayList<Object> channel_list = new ArrayList<Object>();
@@ -416,9 +417,12 @@ public class MainActivity extends AppCompatActivity  {
                     }
                 });
 
-
+*/
 
                 // 데이터 원본 준비
+
+                /*
+
                 itemList3 = new ArrayList<MenuItema>();
 
 
@@ -455,6 +459,7 @@ public class MainActivity extends AppCompatActivity  {
                     }
                 });
 
+*/
 
 
                 mDrawerLayout.openDrawer(drawerView);

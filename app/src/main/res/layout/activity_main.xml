@@ -151,7 +151,7 @@
                     android:overScrollMode="never"
                     android:scrollbars="none"></ListView>
 
-
+<!--
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -174,8 +174,6 @@
                     android:overScrollMode="never"
                     android:scrollbars="none"
                     android:paddingBottom="0dp"></ListView>
-
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -200,6 +198,8 @@
                     android:scrollbars="none"
                     android:paddingBottom="28dp"></ListView>
 
+
+-->
 
             </LinearLayout>
     </ScrollView>
